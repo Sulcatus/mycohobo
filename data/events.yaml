@@ -1,0 +1,12 @@
+# Add 2026 events here — one entry per event
+# Format:
+#   - date: "Mon DD"
+#     title: "Event Name"
+#     location: "City, State"
+#     url: "https://..."
+#
+# Example:
+# - date: "Apr 19-25"
+#   title: "FUNNZ Fungal Foray"
+#   location: "Karamea, New Zealand"
+#   url: "https://funnz.org.nz"

@@ -1,0 +1,9 @@
+name = "Mycohobo"
+license = "MIT"
+licenselink = ""
+description = "Custom theme for mycohobo.com"
+tags = ["minimal", "professional"]
+min_version = "0.100.0"
+
+[author]
+  name = "Durbs (Hatch AI)"

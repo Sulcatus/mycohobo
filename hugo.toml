@@ -1,0 +1,50 @@
+baseURL = "https://sulcatus.github.io/mycohobo/"
+languageCode = "en-us"
+title = "Mycohobo — Noah Siegel"
+theme = "mycohobo"
+
+[params]
+  description = "Noah Siegel — mycologist, field guide author, photographer, and sought-after speaker. Author of Mushrooms of Cascadia, Mushrooms of Alaska, and Mushrooms of the Redwood Coast."
+  author = "Noah Siegel"
+  tagline = "mycologist · author · photographer · speaker"
+  email = "noahmorrissiegel@gmail.com"
+  inat_user = "noah_siegel"
+  inat_id = 258652
+  inat_observations = 10367
+  inat_identifications = 55352
+  inat_species = 1984
+
+[params.social]
+  inat = "https://www.inaturalist.org/people/noah_siegel"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Books"
+    url = "/books/"
+    weight = 2
+  [[menu.main]]
+    name = "Talks & Events"
+    url = "/talks/"
+    weight = 3
+  [[menu.main]]
+    name = "Photography"
+    url = "/gallery/"
+    weight = 4
+  [[menu.main]]
+    name = "Research"
+    url = "/research/"
+    weight = 5
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 6
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]

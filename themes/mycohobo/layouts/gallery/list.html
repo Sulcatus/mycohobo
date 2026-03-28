@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Photography</h1>
+    <p class="section-subtitle">Noah is one of the premier mushroom photographers in the nation. His photographs have won multiple NAMA awards and been featured in FUNGI Magazine, numerous field guides, and club publications.</p>
+
+    <div class="gallery-grid">
+      {{ range site.Data.gallery }}
+      <div class="gallery-item">
+        <img src="{{ .image }}" alt="{{ .species }}" loading="lazy">
+        <div class="gallery-caption">{{ .species }}{{ with .location }} · {{ . }}{{ end }}</div>
+      </div>
+      {{ end }}
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <p style="color: var(--color-text-muted); margin-bottom: 1rem;">See more of Noah's observations and photographs on iNaturalist.</p>
+      <a href="https://www.inaturalist.org/people/noah_siegel" class="btn" style="display: inline-block; background: var(--color-accent); color: white; padding: 0.75rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600;">View on iNaturalist</a>
+    </div>
+  </div>
+</section>
+{{ end }}

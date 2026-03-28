@@ -1,0 +1,20 @@
+{{ $cta := true }}
+{{ with .Params.hide_cta }}{{ $cta = not . }}{{ end }}
+
+{{ if $cta }}
+<div class="cta-banner">
+  <h2>Book Noah for Your Next Event</h2>
+  <p>Captivating talks on fungi, ecology, and biodiversity for audiences of all levels.</p>
+  <a href="{{ "contact/" | relURL }}" class="btn">Get in Touch</a>
+</div>
+{{ end }}
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      &copy; {{ now.Year }} Noah Siegel · Mycohobo
+      &nbsp;·&nbsp;
+      <a href="{{ .Site.Params.social.inat }}" target="_blank">iNaturalist</a>
+    </p>
+  </div>
+</footer>

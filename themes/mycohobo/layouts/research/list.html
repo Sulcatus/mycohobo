@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Research & Publications</h1>
+    <p class="section-subtitle">Contributions to fungal taxonomy, field surveys, and conservation.</p>
+
+    <h2 style="font-family: var(--font-heading); margin-top: 2rem; margin-bottom: 1.5rem;">Peer-Reviewed Publications</h2>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <span class="pub-title">New species and nomenclatural changes in Cortinarius from North America</span><br>
+        <span class="pub-journal">Fungal Systematics and Evolution</span> — Ammirati, Niskanen, Liimatainen, Siegel, et al.
+      </li>
+      <li class="pub-item">
+        <span class="pub-title">Cortinarius species associated with Nothofagus in the Southern Hemisphere</span><br>
+        <span class="pub-journal">Mycologia</span> — Siegel, Ammirati, et al.
+      </li>
+      <li class="pub-item">
+        <span class="pub-title">Boletaceae of the Pacific Northwest</span><br>
+        <span class="pub-journal">Various publications</span> — Contributions to the taxonomy of boletes in western North America.
+      </li>
+    </ul>
+    <p style="margin-top: 1rem; color: var(--color-text-muted); font-size: 0.92rem;">Full publication list being compiled. Additional references available on request.</p>
+
+    <h2 style="font-family: var(--font-heading); margin-top: 3rem; margin-bottom: 1rem;">Field Surveys & Contract Work</h2>
+    <p>Noah has extensive experience conducting biological surveys and mycological assessments for federal and state agencies, including the USDA Forest Service. His work includes:</p>
+    <ul style="margin-top: 1rem; margin-left: 1.5rem;">
+      <li>Forest health and fungal diversity surveys across the Pacific Northwest</li>
+      <li>Mycological assessments for environmental impact studies</li>
+      <li>Species documentation and identification for conservation planning</li>
+      <li>Training and capacity building for field staff</li>
+    </ul>
+    <p style="margin-top: 1rem;"><a href="{{ "contact/" | relURL }}" style="color: var(--color-accent); font-weight: 600;">Contact Noah</a> for consulting inquiries and Forest Service bids.</p>
+
+    <h2 style="font-family: var(--font-heading); margin-top: 3rem; margin-bottom: 1rem;">Tanzania Chimp Mycophagy Project</h2>
+    <p>Noah is contributing to groundbreaking research on fungal consumption by wild chimpanzees in the Issa Valley of western Tanzania, in collaboration with the Greater Mahale Ecosystem Research and Conservation (GMERC) project at University College London. This interdisciplinary project combines primatology and mycology to document the role of fungi in great ape diets.</p>
+    <p style="margin-top: 1rem;"><a href="https://www.gofundme.com/" style="color: var(--color-accent); font-weight: 600;">Support this research →</a></p>
+
+    <h2 style="font-family: var(--font-heading); margin-top: 3rem; margin-bottom: 1rem;">iNaturalist Contributions</h2>
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-number">{{ .Site.Params.inat_observations | lang.FormatNumber 0 }}</span>
+        <span class="stat-label">Observations</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">{{ .Site.Params.inat_identifications | lang.FormatNumber 0 }}</span>
+        <span class="stat-label">Identifications</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">{{ .Site.Params.inat_species | lang.FormatNumber 0 }}</span>
+        <span class="stat-label">Species</span>
+      </div>
+    </div>
+    <p style="margin-top: 1rem;">As a <strong>Curator</strong> on iNaturalist, Noah contributes expert identifications across a broad range of fungal taxa. <a href="https://www.inaturalist.org/people/noah_siegel" style="color: var(--color-accent);">View profile →</a></p>
+  </div>
+</section>
+{{ end }}

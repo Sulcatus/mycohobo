@@ -1,0 +1,65 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Talks & Events</h1>
+    <p class="section-subtitle">Noah is a sought-after speaker in the mycology community, known for captivating audiences with deep expertise and engaging presentation style.</p>
+
+    <h2 style="font-family: var(--font-heading); margin-top: 2rem; margin-bottom: 1rem;">2026 Engagements</h2>
+    <p style="color: var(--color-text-muted); margin-bottom: 2rem;">Check back for upcoming dates. <a href="{{ "contact/" | relURL }}" style="color: var(--color-accent);">Contact Noah</a> to book a talk or workshop.</p>
+
+    <!-- Events loaded from data/events.yaml — easy to update -->
+    {{ $events := site.Data.events }}
+    {{ with $events }}
+    <ul class="event-list">
+      {{ range . }}
+      <li class="event-item">
+        <div class="event-date">{{ .date }}</div>
+        <div>
+          <div class="event-title">{{ .title }}</div>
+          <div class="event-location">{{ .location }}</div>
+          {{ with .url }}<a href="{{ . }}" class="event-link" target="_blank">More info →</a>{{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+
+    <h2 style="font-family: var(--font-heading); margin-top: 3rem; margin-bottom: 1.5rem;">Talk Topics</h2>
+    <p style="margin-bottom: 1.5rem;">Noah tailors presentations for audiences from curious beginners to professional mycologists. Popular talks include:</p>
+
+    <div class="talk-topics">
+      <div class="talk-topic">
+        <h4>Mushrooms of Cascadia: A Fungal Paradise</h4>
+        <p>Introduces listeners to the spectacular diversity of mushrooms in the PNW and how they grow across unique habitats.</p>
+      </div>
+      <div class="talk-topic">
+        <h4>Mushrooms of the Redwood Coast</h4>
+        <p>Gain a better understanding about the mushrooms of northern California, hear some of the stories behind the book, and enjoy breathtaking photographs.</p>
+      </div>
+      <div class="talk-topic">
+        <h4>Exploring the Unknown: Cryptic Mushroom Diversity In Your Backyard</h4>
+        <p>Modern taxonomical tools have shown that many fungi are undescribed. This talk highlights recent discoveries and how you can advance mycology in your area.</p>
+      </div>
+      <div class="talk-topic">
+        <h4>Money in the Bankeraceae: Taking a Bite Into Tooth Fungi</h4>
+        <p>Bankeraceae — including Hydnellum, Sarcodon, Phellodon and Bankera — Noah explains the latest changes and tips on identification of this tricky group.</p>
+      </div>
+      <div class="talk-topic">
+        <h4>To Live and To Dye For</h4>
+        <p>Edible, poisonous and dye mushrooms of Alaska — exploring the intersection of mycology, foraging, and traditional craft.</p>
+      </div>
+      <div class="talk-topic">
+        <h4>"Stop Walking on Truffles" — The Cryptic World Underground</h4>
+        <p>Although truffles are renowned for their culinary properties, very few species are prized edibles. This talk highlights common species and how to find and identify them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container" style="text-align: center;">
+    <img src="{{ "images/noah-teaching.jpg" | relURL }}" alt="Noah Siegel presenting to an audience" style="max-width: 700px; width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+    <p style="margin-top: 1rem; color: var(--color-text-muted); font-style: italic;">Noah leading a field workshop</p>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,44 @@
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Noah Siegel",
+  "url": "https://mycohobo.com",
+  "jobTitle": "Mycologist, Field Guide Author, and Photographer",
+  "description": "{{ .Site.Params.description }}",
+  "knowsAbout": ["Mycology", "Fungi", "Mushroom Identification", "Field Mycology", "Fungal Taxonomy", "Mushroom Photography", "Cortinarius", "Boletaceae"],
+  "sameAs": [
+    "{{ .Site.Params.social.inat }}"
+  ],
+  "hasOccupation": [
+    {
+      "@type": "Occupation",
+      "name": "Mycologist"
+    },
+    {
+      "@type": "Occupation",
+      "name": "Field Guide Author"
+    }
+  ],
+  "award": "NAMA Photography Award"
+}
+</script>
+{{ end }}
+
+{{ if eq .Type "books" }}
+{{ range .Params.books }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "{{ .title }}",
+  "author": [{{ range $i, $a := .authors }}{{ if $i }}, {{ end }}{"@type": "Person", "name": "{{ $a }}"}{{ end }}],
+  "publisher": {"@type": "Organization", "name": "{{ .publisher }}"},
+  "numberOfPages": {{ .pages }},
+  "bookFormat": "Paperback",
+  "inLanguage": "en"
+}
+</script>
+{{ end }}
+{{ end }}

@@ -1,0 +1,36 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <h1 class="section-title">Contact</h1>
+    <p class="section-subtitle">Interested in booking a talk, workshop, or consulting engagement? Get in touch.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 style="font-family: var(--font-heading);">Speaking & Events</h3>
+        <p>Noah is available for mushroom talks, workshops, field walks, and forays. Whether you're organizing a mycological society meeting, nature festival, or corporate event, Noah tailors his presentations for audiences from beginners to professionals.</p>
+
+        <h3 style="font-family: var(--font-heading); margin-top: 2rem;">Consulting & Surveys</h3>
+        <p>For USDA Forest Service contract bids, environmental assessments, and mycological consulting, please reach out with project details.</p>
+
+        <h3 style="font-family: var(--font-heading); margin-top: 2rem;">Mushroom Identification</h3>
+        <p>For mushroom ID questions, please add a clearly photographed observation to <a href="https://www.inaturalist.org" style="color: var(--color-accent);">iNaturalist</a> and tag <strong>@noah_siegel</strong>. Noah will do his best to give input where he can.</p>
+      </div>
+
+      <div>
+        <div style="background: var(--color-bg-alt); padding: 2rem; border-radius: 8px; border: 1px solid var(--color-border);">
+          <h3 style="font-family: var(--font-heading); margin-bottom: 1rem;">Get in Touch</h3>
+          <p style="margin-bottom: 1.5rem;">Email is the best way to reach Noah:</p>
+          <a href="mailto:{{ .Site.Params.email }}" style="display: inline-block; background: var(--color-accent); color: white; padding: 0.75rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600;">Send Email</a>
+
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+            <h4 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Find Noah Online</h4>
+            <ul style="list-style: none; font-size: 0.95rem;">
+              <li style="margin-bottom: 0.5rem;">🍄 <a href="https://www.inaturalist.org/people/noah_siegel" style="color: var(--color-accent);">iNaturalist</a> — {{ .Site.Params.inat_observations | lang.FormatNumber 0 }} observations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
